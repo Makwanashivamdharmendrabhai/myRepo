@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>Creating New Listing</h3>
+    <br>
+    <form class="needs-validation" novalidate action="/listing/new" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title: </label>
+                    <input type="text" class="form-control" name="listing[title]" id="title" placeholder="Enter Title" autocomplete="on" required>
+                    <div class="invalid-feedback">Please enter a title.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description: </label>
+                    <textarea name="listing[description]" class="form-control" id="description" placeholder="Enter description" autocomplete="on" rows="10" required></textarea>
+                    <div class="invalid-feedback">Please enter a description.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload Image: </label>
+                    <input type="file" name="listing[image]" class="form-control" id="image" required>
+                    <div class="invalid-feedback">Please Upload File</div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price: </label>
+                        <input name="listing[price]" class="form-control" id="price" placeholder="Enter price" required>
+                        <div class="invalid-feedback">Please enter a price.</div>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="location" class="form-label">Location: </label>
+                        <input type="text" name="listing[location]" class="form-control" id="location" placeholder="Enter location" autocomplete="on" required>
+                        <div class="invalid-feedback">Please enter a location.</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country: </label>
+                    <input type="text" name="listing[country]" class="form-control" id="country" placeholder="Enter country" autocomplete="on" required>
+                    <div class="invalid-feedback">Please enter a country.</div>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+                <br><br>
+            </div>
+        </div>
+    </form>
+</body>

@@ -1,0 +1,58 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>Editing your Listing</h3>
+    <form class="needs-validation" novalidate action="/listing/<%=listing.id%>/edit?_method=PATCH" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title: </label>
+                    <input type="text" class="form-control" name="listing[title]" id="title" value="<%=listing.title%>" autocomplete="on" required>
+                    <div class="invalid-feedback">Please enter a title.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description: </label>
+                    <textarea name="listing[description]" class="form-control" id="description" autocomplete="on" rows="10" required><%=listing.description%></textarea>
+                    <div class="invalid-feedback">Please enter a description.</div>
+                </div>
+                <div class="mb-3">
+                    Original Image : <br>
+                    <img src="<%=originalUrl%>" alt="current lisitng img" height="200px" width="200px">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload New Image: </label>
+                    <input type="file" name="listing[image]" class="form-control" id="image">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price: </label>
+                        <input type="number" name="listing[price]" class="form-control" id="price" value="<%=listing.price%>" required>
+                        <div class="invalid-feedback">Please enter a price.</div>
+                    </div>
+                    <div class="mb-3 col-md-8">
+                        <label for="location" class="form-label">Location: </label>
+                        <input type="text" name="listing[location]" class="form-control" id="location" value="<%=listing.location%>" autocomplete="on" required>
+                        <div class="invalid-feedback">Please enter a location.</div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country: </label>
+                    <input type="text" name="listing[country]" class="form-control" id="country" value="<%=listing.country%>" autocomplete="on" required>
+                    <div class="invalid-feedback">Please enter a country.</div>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+                <br><br>
+            </div>
+        </div>
+    </form>
+</body>
+<script>
+    document.querySelectorAll('#editForm input').forEach(input => {
+      input.addEventListener('focus', function() {
+        this.select(); // Select all the text when the input is focused
+      });
+
+      input.addEventListener('input', function() {
+        this.value = this.value; // Replace old value as soon as the user starts typing
+      });
+    });
+  </script>

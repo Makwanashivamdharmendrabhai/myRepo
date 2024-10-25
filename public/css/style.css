@@ -1,0 +1,186 @@
+.navbar {
+    background-color: white;
+    top: 0 !important;
+    z-index: 1030 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.fa-compass {
+    color: red;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.f-info {
+    background-color: gainsboro;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.f-info-social,
+.f-info-links,
+#brand {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    margin-right: 1rem;
+    color: black;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline black;
+}
+
+#brand {
+    line-height: 100%;
+}
+
+.f-info-social i {
+    margin-right: 1rem;
+    color: black;
+}
+
+.fa-brands:hover {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card {
+    height: 20rem;
+    width: 100%;
+    border:none !important;
+    border-radius: 30px;
+}
+
+.card img {
+    height: 75%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+}
+
+.card-body {
+    height: 25%;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: white !important;
+    color: black !important;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center !important;
+    text-decoration: underline red !important;
+    margin-top: 20px;
+}
+
+/* Horizontally center the card and provide margin for header and footer */
+.showWrapper {
+    display: flex;
+    margin: auto;
+    width: 45%;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    justify-content: center;
+}
+
+#showcard {
+    width: 100%;
+    border: none !important
+}
+
+
+
+/* Button Group Styling */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    /* Creates a gap between buttons */
+    margin: auto;
+    width: 45%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 7%;
+    margin-bottom: 3%;
+}
+
+.btn-group form {
+    width: 48%;
+    /* Each button occupies 48% of the width with space between them */
+}
+
+.btn-group form .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Edit Button (Blue) */
+#edit-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+#edit-btn:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Adds shadow effect on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+/* Delete Button (Red) */
+#delete-btn {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+#delete-btn:hover {
+    background-color: #c82333;
+    /* Darker shade on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Adds shadow effect on hover */
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+.review{
+    margin: auto;
+    width: 45%;
+    margin-bottom: 3%;
+    padding: 1rem;
+}
+
+.review-card{
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 10px;
+}
